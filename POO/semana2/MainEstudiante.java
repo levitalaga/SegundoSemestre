@@ -1,10 +1,12 @@
 public class MainEstudiante {
-    public static void main(String[] args) {
-    //Atributos de la clase
+    // Atributos de la clase
     int id;
     String nombre;
     double nota;
- 
+
+    public static void main(String[] args) {
+    }
+
     //Método mostrarInformacion()
     /* firma del método:
        public : Es público
@@ -15,5 +17,5 @@ public class MainEstudiante {
         System.out.println("id: " + id);
         System.out.println("nombre: " + nombre);
         System.out.println("nota: " + nota);
-    
+    }
 }
