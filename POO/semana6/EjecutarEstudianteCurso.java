@@ -1,14 +1,14 @@
 package POO.semana6;
 
-public class EjecutarEstudiante2 {
+public class EjecutarEstudianteCurso {
     public static void main(String[] args) {
 
         // Creación de cinco objetos
-        Estudiante2 est1 = new Estudiante2("Ana", "1001", 18, "ana@correo.com", "Ingeniería de Sistemas", 2);
-        Estudiante2 est2 = new Estudiante2("Carlos", "1002", 17, "carlos@correo.com", "Contaduría", 1);
-        Estudiante2 est3 = new Estudiante2("Laura", "1003", 21, "laura@correo.com", "Psicología", 5);
-        Estudiante2 est4 = new Estudiante2("Miguel", "1004", 23, "miguel@correo.com", "Derecho", 10);
-        Estudiante2 est5 = new Estudiante2("Sofía", "1005", 19, "sofia@correo.com", "Medicina", 3);
+        EstudianteCurso est1 = new EstudianteCurso("Ana", "1001", 18, "ana@correo.com", "Ingeniería de Sistemas", 2);
+        EstudianteCurso est2 = new EstudianteCurso("Carlos", "1002", 17, "carlos@correo.com", "Contaduría", 1);
+        EstudianteCurso est3 = new EstudianteCurso("Laura", "1003", 21, "laura@correo.com", "Psicología", 5);
+        EstudianteCurso est4 = new EstudianteCurso("Miguel", "1004", 23, "miguel@correo.com", "Derecho", 10);
+        EstudianteCurso est5 = new EstudianteCurso("Sofía", "1005", 19, "sofia@correo.com", "Medicina", 3);
 
         // Estado inicial
         System.out.println("=== Estado inicial ===");
