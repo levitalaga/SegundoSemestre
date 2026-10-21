@@ -2,18 +2,21 @@ import java.time.LocalDate;
 
 public class Pedido {
 
+    // 1. ATRIBUTOS
     private Cliente cliente;
     private Producto[] productos;
     private LocalDate fecha;
-    private String numeroTarjetaCredito;
+    private Pago pago;
 
-    public Pedido(Cliente cliente, Producto[] productos, LocalDate fecha, String numeroTarjetaCredito) {
+    // 2. CONSTRUCTOR
+    public Pedido(Cliente cliente, Producto[] productos, LocalDate fecha, Pago pago) {
         this.cliente = cliente;
         this.productos = productos;
         this.fecha = fecha;
-        this.numeroTarjetaCredito = numeroTarjetaCredito;
+        this.pago = pago;
     }
 
+    // 3. GETTERS
     public Cliente getCliente() {
         return cliente;
     }
@@ -26,17 +29,17 @@ public class Pedido {
         return fecha;
     }
 
+    public Pago getPago() {
+        return pago;
+    }
+
+    // 4. MÉTODOS
     public double calcularTotal() {
         double total = 0;
         for (Producto producto : productos) {
             total += producto.getPrecio();
         }
         return total;
-    }
-
-    public String ocultarTarjeta() {
-        String ultimos4 = numeroTarjetaCredito.substring(numeroTarjetaCredito.length() - 4);
-        return "**** **** **** " + ultimos4;
     }
 
     public void mostrarPedido() {
@@ -48,7 +51,7 @@ public class Pedido {
             System.out.println("  - " + producto);
         }
         System.out.println("Total: $" + calcularTotal());
-        System.out.println("Tarjeta: " + ocultarTarjeta());
+        pago.procesarPago(calcularTotal());
     }
 
     @Override
