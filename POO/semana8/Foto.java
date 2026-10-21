@@ -1,14 +1,10 @@
 public class Foto {
-  
-    //Atributo
     private String fichero;
 
-    //Constructor
     public Foto (String fichero) {
         this.fichero = fichero;
     }
 
-    //Getter y Setter
     public String getFichero(){
         return fichero;
     }

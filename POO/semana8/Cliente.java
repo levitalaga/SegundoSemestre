@@ -1,5 +1,4 @@
 public class Cliente {
-    //Atributos de la clase 
     private String cedula;
     private String nombre;
 
@@ -9,7 +8,6 @@ public class Cliente {
         this. nombre = nombre;
     }
      
-    //Getters y Setters
     public String getCedula() {
         return cedula;
     }

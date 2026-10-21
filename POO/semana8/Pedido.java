@@ -2,13 +2,11 @@ import java.time.LocalDate;
 
 public class Pedido {
 
-    // 1. ATRIBUTOS
     private Cliente cliente;
     private Producto[] productos;
     private LocalDate fecha;
     private String numeroTarjetaCredito;
 
-    // 2. CONSTRUCTOR
     public Pedido(Cliente cliente, Producto[] productos, LocalDate fecha, String numeroTarjetaCredito) {
         this.cliente = cliente;
         this.productos = productos;
@@ -16,7 +14,6 @@ public class Pedido {
         this.numeroTarjetaCredito = numeroTarjetaCredito;
     }
 
-    // 3. GETTERS
     public Cliente getCliente() {
         return cliente;
     }
@@ -29,7 +26,6 @@ public class Pedido {
         return fecha;
     }
 
-    // 4. MÉTODOS
     public double calcularTotal() {
         double total = 0;
         for (Producto producto : productos) {

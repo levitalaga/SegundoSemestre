@@ -1,15 +1,12 @@
 public abstract class Producto {
-    //Atributos de los productos
     private int numero;
     private double precio;
 
-    //Constructor
     public Producto( int numero, double precio) {
         this.numero = numero;
         this.precio = precio;
     }
 
-    // Getters y Setters
     public int getNumero() {
         return numero;
     }
