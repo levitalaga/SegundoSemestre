@@ -2,11 +2,18 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Sistema de ascensores iniciado");
 
-        SensorObstaculo sensor = new SensorObstaculo();
-        System.out.println(sensor);
+        Puerta puerta = new Puerta("Puerta del ascensor");
+        System.out.println(puerta);
 
-        sensor.simularObstaculo(true);
-        System.out.println("Hay obstaculo? " + sensor.hayObstaculo());
-        System.out.println(sensor); 
+        puerta.abrir();
+        puerta.mantenerAbierta(10);
+
+        puerta.getSensor().simularObstaculo(true);     // alguien se atraviesa
+        System.out.println("¿Se cerró? " + puerta.cerrar());
+
+        puerta.getSensor().simularObstaculo(false);    // la persona se quita
+        System.out.println("¿Se cerró? " + puerta.cerrar());
+
+        System.out.println(puerta);
     }
 }
