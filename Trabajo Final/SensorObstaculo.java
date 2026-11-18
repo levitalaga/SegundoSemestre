@@ -15,7 +15,7 @@ public class SensorObstaculo {
         this.obstaculoDetectado = valor;
     }
 
-    public boolean isActivo() {
+    public boolean estaActivo() {
         return activo;
     }
 
